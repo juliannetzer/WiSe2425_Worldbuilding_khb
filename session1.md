@@ -182,7 +182,7 @@ Note: you can also use other file formats (link .blend etc. if the corresponding
 - [Monster Mash](https://monstermash.zone/)
 
 ## AI Tools
-![](images/genie.jpeg)
+![](images/lumalabsgenie.jpeg)
 - [Lumalabs Genie](https://lumalabs.ai/genie?view=create)
 ![](images/hyper3d.jpeg)
 - [Hyper3D - Rodin](https://hyper3d.ai/)
