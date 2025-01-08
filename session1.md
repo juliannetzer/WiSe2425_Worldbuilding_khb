@@ -176,15 +176,28 @@ Note: you can also use other file formats (link .blend etc. if the corresponding
 
 
 ## Online Sculpting Tools
+
+### SculptGL 
 ![](images/sculptgl.jpeg)
-- [SculptGL](https://stephaneginier.com/sculptgl/)
+
+An  WebGL-based sculpting application that enables users to create and refine 3D models directly in their browser.
+[Link](https://stephaneginier.com/sculptgl/)
+
+### MonsterMash
 ![](images/monstermesh.jpeg)
-- [Monster Mash](https://monstermash.zone/)
+A sketch-based modeling and animation tool that allows users to draw 2D characters, inflate them into 3D models, and animate them.
+[Link](https://monstermash.zone/)
 
 ## AI Tools
+
+### Lumalabs Genie
 ![](images/lumalabsgenie.jpeg)
-- [Lumalabs Genie](https://lumalabs.ai/genie?view=create)
+A platform designed to generate 3D models from text and images.
+[Link](https://lumalabs.ai/genie?view=create)
+
+### Hyper3D 
 ![](images/hyper3d.jpeg)
+An AI-powered 3D model generator that creates 3D assets from text and images.
 - [Hyper3D - Rodin](https://hyper3d.ai/)
 
 ## Troubleshooting
@@ -202,24 +215,7 @@ Probably a problem with the renderpipeline, find the material in the project win
 
 # <a name="perfomance"></a>Performance?
 
-Especially when choosing the 3D assets and lights, you should have in mind where your scene will be played in the end, e.g. as desktop VR, i.e. on a powerful computer, or in mobile VR (e.g. an Oculus Quest). As all devices only have a limited performance capacity. For the quest there is a website which gives you an good overview: 
-https://developer.oculus.com/documentation/unity/unity-perf/
-
-We are gonna stick with the triangle xount for now, this is the information on the quest website: 
-| Platform         | Triangle Count   |
-| ---------------- | ---------------- |
-| Quest 1          | 350k-500k        |
-| Quest 2          | 750k-1.0m        |
-
-
-You can now compare this to the triangle count in your Unity scene:
-Go to Game View and toggle "Stats" you can now see the Triangle Count 
-![](images/triangle.jpg)
-
-If your triangle count gets to high, you have to find the complex 3D-Asset in your scene, to see the triangle count of a single object, search the Asset in the asset-window and click on the mesh as seen below: 
-![](images/trianglecountsingleobject.gif)
-You can now see the triangle count in the inspector: 
-![](images/trianglecountsinsingleobject.jpg)
+Especially when choosing the 3D assets and lights, you should have in mind where your scene will be played in the end, e.g. as desktop VR, i.e. on a powerful computer, or in mobile VR (e.g. an Oculus Quest). As all devices only have a limited performance capacity.
 
 To reduce the triangles of an object, you can use a 3D-modelling-software like blender, you can find more information here: 
 [Simplify a Mesh in Blender](https://all3dp.com/2/blender-simplify-mesh-simply-explained/)
@@ -233,20 +229,8 @@ Realtime lights calculate the lightrays in realtime, that means you can move the
 
 There are three types of lights: Spotlight, Pointlight, Directional ligth
 
-## Baked Lights
-For more advanced lighting you can bake your light, that means you prerender your lightmap which is then like a fixed texture on the object. You can't move the light source or the objects that get illuminated without recalculating the light. 
-
-Two examples for baked lights are: area lights and skyboxes. 
-
-To see the effect of a baked light, you have to set the object to static which you want to illuminate: 
-Select the object in the hierarchy and select Static -> Contribute GI 
-
-![](images/staticlighting.jpeg)
-
-Then go to the "Lighting"-window (Window -> Rendering -> Lighting) and click on "Generate Lighting" (make sure the "Auto-Generate"-Box is not ticked)
-
 ## Skyboxes 
-Skyboxes can be used to very easily create a complex lighting (and background) for a scene. It's basically a sphere around the scene that is filled with a texture, that illuminate the scene. 
+A Skybox is a panoramic background that surrounds your entire scene, simulating the appearance of a distant environment, such as a sky, stars, or a landscape. It's implemented as a textured sphere or cube that wraps around the scene and serves as both a visual backdrop and a source of ambient lighting. By using a Skybox, you can easily change the atmosphere and lighting of your scene.
 
 To use a skybox go the lighting window (Window -> Rendering -> Lighting) and select the skybox material: 
 ![](images/skyboxlighting.jpeg)
@@ -294,71 +278,6 @@ Places to get (free) sounds:
 - [Soundcloud](https://soundcloud.com/)
 
 > Tutorial how to work with Audio Tracks in the timeline: [Unity Learn: Audio and the Timeline](https://learn.unity.com/tutorial/working-with-audio-tracks-in-timeline#5f6126e3edbc2a0020034db9)
-
-## <a name="spatialaudio"></a>Spatial Audio
-
-Spatial Audio works in Unity out of the box. If you have created an audio source in unity, you can use the "Spatial Blend" value to set how much the positioning of the audio source affects the volume and audible direction of the source. 
-![](images/Audio1.jpg)
-
-With "Min Distance" and "Max Distance" you can set the minimum and maximum distance of audibility. 
-![](images/Audio2.jpg)
-
-With the "Volume Rolloff" you can select different Rolloff algorithms. Select "Linear Rolloff" if you want to hear a strong difference based on the positioning, "Logarithmic Rolloff" for a more realistic effect. 
-![](images/Audio3.jpg)
-
-# <a name="animation"></a>Animation: Timeline
-![](images/animations.jpeg)
-
-## Animations window 
-
-To animate an object, open the "Animation" window (Window -> Animation -> Anmation). 
-Then select the GameObject you want to animate in the hierarchy window, now you should see this in the Animation Window: 
-![](images/beginanimating.jpeg)
-Click on "Create" this creates an *Animation Clip*.
-
-Now you can start to animate your object either by hitting the record button:
-![](images/record.gif)
-or by manually adding the properties and keyframes: 
-![](images/keyframe.gif)
-
-See also:
-- [Tutorial Animation in Unity](https://learn.unity.com/tutorial/working-with-animations-and-animation-curves#)
-
-By default the Animation will loop, if you only want it to play once select the Animation Clip in the Project window and untick "Loop Time" in the Inspector. 
-![](images/loop.jpeg)
-
-
-> This method works best when you want to animate a single objects, like a spinning light. If you want to animate multiple objects together and the timing is importing, like for example a cinematic scene, or a transition scene then the "Timeline"-feature works better. 
-
-## Animator window
-![](images/Animator.jpeg)
-
-*Note: we don't need the animator window for our course, but it's easier to understand the Unity Animation system if you know about it* 
-The Animator selects when your animation clips will be played, for example when you want to create a Character that has different states (like walking, standing, running) and one animation clip for each state you would animate this in the Animator window (in general: non-linear animations). In this case you would need a little bit of coding, you can find a tutorial here: 
-https://www.youtube.com/watch?v=tveRasxUabo
-
-## Timeline
-![](images/Timeline.jpeg)
-
-The Timeline works best if you want to create a linear sequence of animations, like a transition scene or a little movie sequence. 
-
-To work with the Timeline open the Timeline window (Window -> Sequencing -> Timeline). 
-Then create an empty GameObject (GameObject -> Create Empty) and name it "Director", this GameObject will control our movie sequence (and also our cameras later). 
-
-> You can click on the settings wheel on the upper right side and choose whether you wanna work in seconds or in frames. ![](images/timing.jpeg)
-
-### Activating Objects in the Timeline
-With the timeline you can easily activate and deactivate objects. Right-click on the left side of the Timeline window and select "Activation Track" then drag and drop the GameObject you want to activate and deactive in the selector field. 
-![](images/activation.gif)
-You can also change the time when and for how long your object should be active
-![](images/changeactivation.gif)
-
-### Animate Objects
-You can also animate object in the same way as in the Animation window, but in the Timeline window you can directly see the timing for the whole scene, in case the animation should happen at a specific point in time. 
-Right click on the left side again and select "Animation Track" (always make sure that the "Director" GameObject is selected in the hierarchy) then drag and drop the object you want to animate in the selector field and click on record. 
-![](images/animationtimeline.gif)
-
-> Here you can find some information about the other tracks you can use with the timeline: [Overview of the Timeline-Features](https://lukeduckett.medium.com/it-all-comes-down-to-timing-a-quick-guide-to-timeline-in-unity-fd96b26820f4),[Control Track](https://christopherhilton88.medium.com/what-is-a-control-track-in-timeline-f70588662cce), [Signal Track](https://blog.unity.com/technology/how-to-use-timeline-signals), [Playable Track](https://docs.unity3d.com/2018.3/Documentation/ScriptReference/Timeline.PlayableTrack.html)
 
 
 
