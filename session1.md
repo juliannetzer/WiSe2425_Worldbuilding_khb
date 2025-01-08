@@ -142,6 +142,8 @@ Conversion Table for using Polyhaven Materials:
 # <a name="3dassets"></a>Working with imported 3D Assets
 ![](images/assets.jpeg)
 
+Most of the times the 3D-Assets are not generated outside of Unity and then imported into the project.
+
 To import Assets into your project, just drag and drop them into the "project"/Assets-window
 
 Supported file formats: 
@@ -174,8 +176,16 @@ Note: you can also use other file formats (link .blend etc. if the corresponding
 
 
 ## Online Sculpting Tools
+![](images/sculptgl.jpeg)
 - [SculptGL](https://stephaneginier.com/sculptgl/)
+![](images/monstermesh.jpeg)
 - [Monster Mash](https://monstermash.zone/)
+
+## AI Tools
+![](images/genie.jpeg)
+- [Lumalabs Genie](https://lumalabs.ai/genie?view=create)
+![](images/hyper3d.jpeg)
+- [Hyper3D - Rodin](https://hyper3d.ai/)
 
 ## Troubleshooting
 

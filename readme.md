@@ -11,5 +11,9 @@
 	- [Lights](session1.md#lights)
 	- [Materials/ Shaders/ Textures](session1.md#materials)
 - Session 2
+	- Character
+	- Dialogue System
 	- Audio
 	- Animation
+- Session 3 
+	- Simulated Movement
