@@ -25,6 +25,7 @@ Go to preferences:
 -> Click on "Get a free personal license"
 ![](images/license_4.jpeg)
 
+Sign up for a Unity Account and acivate the license. 
  
 # Create your first project
 
