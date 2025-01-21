@@ -209,9 +209,16 @@ Probably a problem with the renderpipeline, find the material in the project win
 
 Especially when choosing the 3D assets and lights, you should have in mind where your scene will be played in the end, e.g. as desktop VR, i.e. on a powerful computer, or in mobile VR (e.g. an Oculus Quest). As all devices only have a limited performance capacity.
 
+
+
 To reduce the triangles of an object, you can use a 3D-modelling-software like blender, you can find more information here: 
 [Simplify a Mesh in Blender](https://all3dp.com/2/blender-simplify-mesh-simply-explained/)
 
+
+# <a name="terrain"></a>Terrain Tool  
+![](images/terraintools.jpeg)
+With the Terrain Tool, you can very easily create landscapes and add vegetation. You can find a good tutorial here: 
+[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
 
 # <a name="light"></a>Lighting the Scene
 ![](images/lights.jpeg)

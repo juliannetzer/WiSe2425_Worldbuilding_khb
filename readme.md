@@ -4,14 +4,14 @@
 - [Getting Started](gettingstarted.md)
 - [Session 1](session1.md)
 	- [Examples](examples.md)
-	- [Creating a new project](session1.md#project)
-	- [Structuring your project](session1.md#structure)
 	- [Working with the Unity Editor](session1.md#editor)
+	- [Structuring your project](session1.md#structure)
 	- [Working with 3D assets](session1.md#3dassets)
+	- [Terrain](session1.md#terrain)
 	- [Lights](session1.md#lights)
 	- [Materials/ Shaders/ Textures](session1.md#materials)
 - Session 2
-	- Character
+	- Characters
 	- Dialogue System
 	- Audio
 	- Animation
