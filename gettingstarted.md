@@ -29,10 +29,10 @@ Sign up for a Unity Account and acivate the license.
  
 # Create your first project
 
-Go to the Unity Hub and click on "New project" and choose 2022.3.56 (different than in the screenshot)
+Go to the Unity Hub and click on "New project".
 ![](images/newproject1.jpg)
 
-Then select "Universal 3D" under "All Templates" and Download the Template. 
+Choose 2022.3.56 as a Unity version and select "Universal 3D" under "All Templates" and Download the Template. 
 ![](images/newproject2.jpeg)
 
 Then choose a name for your project and click on "Create project"
