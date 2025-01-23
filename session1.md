@@ -134,7 +134,7 @@ Conversion Table for using Polyhaven Materials:
 # <a name="3dassets"></a>Working with imported 3D Assets
 ![](images/assets.jpeg)
 
-Most of the times the 3D-Assets are not generated outside of Unity and then imported into the project.
+Most of the times the 3D-Assets are generated outside of Unity and then imported into the project.
 
 To import Assets into your project, just drag and drop them into the "project"/Assets-window
 
@@ -186,6 +186,22 @@ A sketch-based modeling and animation tool that allows users to draw 2D characte
 ![](images/lumalabsgenie.jpeg)
 A platform designed to generate 3D models from text and images.
 [Link](https://lumalabs.ai/genie?view=create)
+
+## Install .glb Plugin	
+Since Lumalabs uses the .glb-fileformat we have to install a plugin in Unity first, for this follow these steps: 
+Go to https://github.com/Siccity/GLTFUtility and click on "Code" -> "Download ZIP"
+![](images/glb1.jpeg)
+
+Then extract and .zip-file and go back to Unity. Click on "Window" -> "Package Manager"
+![](images/glb2.jpeg)
+
+Click on the + and select "Add package from disk"
+![](images/glb3.jpeg)
+
+Then find your extracted .zip-file and open the "package.json"-file. 
+![](images/glb4.jpeg)
+
+Now you should be able to open the models from Lumalabs.
 
 ### Hyper3D 
 ![](images/hyper3d.jpeg)
