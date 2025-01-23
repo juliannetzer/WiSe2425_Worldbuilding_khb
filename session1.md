@@ -217,6 +217,9 @@ To use the Everything Models:
 An  WebGL-based sculpting application that enables users to create and refine 3D models directly in their browser.
 [Link](https://stephaneginier.com/sculptgl/)
 
+When using this tool, please set the resolution to 3: 
+![](images/sculptgl2.jpeg)
+
 ### MonsterMash
 ![](images/monstermesh.jpeg)
 A sketch-based modeling and animation tool that allows users to draw 2D characters, inflate them into 3D models, and animate them.
