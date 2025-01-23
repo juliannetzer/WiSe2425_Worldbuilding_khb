@@ -202,7 +202,8 @@ Note: you can also use other file formats (link .blend etc. if the corresponding
 ### Using Everything Models 
 
 To use the Everything Models: 
-1. download this shader: [VertexLitShader](Assets/VertexColorLit.shader)
+1. download this shader: [VertexLitShader](Assets/VertexColorLit.shader) (go to "Download Raw File")
+![](images/everything.jpeg)
 2. Drag and Drop the shader in your Unity Project Window
 3. Create a new material -> Drag and Drop the shader on this Material
 4. Apply this material to the everything Model in your scene 
