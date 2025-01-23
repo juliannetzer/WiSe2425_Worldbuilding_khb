@@ -162,7 +162,21 @@ Conversion Table for using Polyhaven Materials:
 
 # <a name="terrain"></a>Terrain Tool  
 ![](images/terraintools.jpeg)
-With the Terrain Tool, you can very easily create landscapes and add vegetation. You can find a good tutorial here: 
+With the Terrain Tool, you can very easily create landscapes and add vegetation. 
+
+To create a Terrain go to: GameObject -> 3D Object -> Terrain 
+
+To now change the height of the Terrain select the Terrain and select the Raise or Lower Terrain Brush: 
+![](images/terrain1.jpeg)
+
+To Paint a Texture select the "Paint Texture" Brush: 
+![](images/terrain2.jpeg)
+Then create a new Layer and choose a texture:  
+![](images/terrain3.jpeg)
+And select with which Layer you want to draw: 
+![](images/terrain4.jpeg)
+
+You can find a good tutorial here: 
 [How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
 
 # <a name="3dassets"></a> Working with imported 3D Assets
