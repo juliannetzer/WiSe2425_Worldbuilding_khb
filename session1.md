@@ -339,3 +339,28 @@ Then you can drag and drop the image that you imported in the cubemap area.
 
 Now you can use the skybox in the lighting settings. 
 
+
+## <a name="workingtogether">Working together with Unity 
+
+To work together in Unity you can either work from on file (e.g. on an external drive) or you can split the work: Person 1 works on the world, Person 2 on the character. 
+
+To merge project the easiest way is to work in one main project and then create packages to transfer your Objects or files. 
+
+## Creating your package for sharing
+
+To create your own package go to Assets -> Export Package 
+![](images/packagemanagerexport1.jpeg)
+
+Then you can select the Assets that you want to include.
+![](images/packagemanagerexport2.jpeg)
+If you now click on Export it will export your files as .unitypackage-file. 
+
+If you want to include Assets from only one scene you can first select your scene in the Project window, right click on it and click on "Select dependencies": 
+![](images/packagemanagerexport3.gif)
+When you now click on Assets -> "Export Package" Unity will only include the Assets from the scene that you selected. 
+
+## Importing costum packages
+To import a package (like the one you created earlier) click on Assets -> Import Package -> Costum Package
+![](images/packagemanagerexport4.jpeg)
+
+

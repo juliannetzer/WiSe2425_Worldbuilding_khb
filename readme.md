@@ -12,12 +12,13 @@
 	- [Working with imported 3D Assets](session1.md#3dassets)
 	- [Online Sculpting Tools](session1.md#onlinetools)
 	- [Lighting the Scene](session1.md#light)
+	- [Working together in Unity](session1.md#workingtogether)
 - Session 2
 	- Animation
 	- Characters
-	- Dialogue System
 	- Audio
 	- Visual Effects
+	- Dialogue System
 - Session 3 
 	- Camera Movements
 	- Simulated Movement
