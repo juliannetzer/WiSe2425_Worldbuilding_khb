@@ -139,7 +139,7 @@ To work with transparency you can either select a shaders that directly supports
 Also make sure to change the Transparency-Setting when importing your texture/image: 
 ![](images/shaders5.jpeg)
  
-### Best Places to get free Textures: 
+## Places to get free Textures: 
 - [Polyhaven](https://polyhaven.com/textures)
 - [Unity Asset Store](https://assetstore.unity.com/?category=2d%2Ftextures-materials&free=true&orderBy=1)
 - [AmbientCG](https://ambientcg.com/)
