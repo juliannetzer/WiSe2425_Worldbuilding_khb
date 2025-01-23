@@ -7,9 +7,9 @@
 	- [Working with the Unity Editor](session1.md#editor)
 	- [Structuring your project](session1.md#structure)
 	- [Working with 3D assets](session1.md#3dassets)
-	- [Terrain](session1.md#terrain)
-	- [Lights](session1.md#lights)
 	- [Materials/ Shaders/ Textures](session1.md#materials)
+	- [Terrain](session1.md#terrain)
+	- [Lights](session1.md#light)
 - Session 2
 	- Characters
 	- Dialogue System

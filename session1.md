@@ -242,7 +242,24 @@ With the Terrain Tool, you can very easily create landscapes and add vegetation.
 ## Realtime Lights 
 Realtime lights calculate the lightrays in realtime, that means you can move the lights, move the object that catch shadows from the light without any prerendering. 
 
-There are three types of lights: Spotlight, Pointlight, Directional ligth
+You can find them under GameObjects -> Light
+![](images/lights1.jpeg)
+
+There are three types of lights: Spotlight, Pointlight, Directional light. 
+
+#### Spotlight
+A Spotlight emits light in a cone shape, illuminating only a specific area in a particular direction. It's ideal for focused lighting, like flashlights, spotlights on a stage, or headlights on a vehicle. You can adjust the cone angle and range to control its spread.
+
+#### Point Light
+A Point Light emits light uniformly in all directions from a single point, similar to a light bulb. It's perfect for creating localized illumination, such as a lamp, a torch, or glowing orbs. You can adjust its range to control how far the light reaches.
+
+#### Directional Light
+A Directional Light emits light evenly across the entire scene, simulating sunlight or moonlight. It has no specific source position and affects all objects as though light rays are parallel. It's commonly used for outdoor scenes or large-scale environments.
+
+You can also change parameters like intensity, color etc. when you select the light in your scene or in your hierarchy: 
+![](images/lights2.jpeg)
+
+
 
 ## Skyboxes 
 A Skybox is a panoramic background that surrounds your entire scene, simulating the appearance of a distant environment, such as a sky, stars, or a landscape. It's implemented as a textured sphere or cube that wraps around the scene and serves as both a visual backdrop and a source of ambient lighting. By using a Skybox, you can easily change the atmosphere and lighting of your scene.
