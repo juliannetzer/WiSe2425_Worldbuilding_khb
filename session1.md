@@ -92,6 +92,15 @@ Since Unity projects quickly get very messy it is important to structure your as
 
 [Best practices of organizing your unity project](https://unity.com/how-to/organizing-your-project)
 
+# <a name="basic3d"></a> Basic 3D Objects
+
+Unity has a few builtin basic 3D Models, like Cubes, Planes, etc. 
+
+You can find them under GameObject -> 3D Object
+![](images/models.jpeg)
+
+> You can also use these simple 3D Objects to build complex scenes, for example when using quads as surfaces and then apply a texture to it you can build simple 2.5D-worlds like [here](https://vk-showcase.kh-berlin.de/project/whomans).
+
 # <a name="materials"></a> Materials/ Shaders/ Textures 
 
 Every 3D-Assets in Unity needs a material that is attached to it, and every material needs a shader. The material is the place where the information like colors and textures are stored. The shader then tells unity how to render these information. (you can compare it to using a pencil: the material stores the color, the shader stores whether it is a wax crayon or a colored pencil). 
@@ -110,6 +119,25 @@ Click on Assets -> Create -> Material
 Now you can add some textures and change the colors. 
 To apply the material to an object, just drag and drop it onto the object. 
 
+## Shaders 
+Shaders are small programs that determine how objects appear in a 3D scene by controlling how surfaces interact with light and textures. They are used to define visual effects like colors, reflections, transparency, and more. Unity uses shaders to create realistic or stylized materials, enabling a wide range of visual styles for your projects. 
+
+The most important ones for you are: 
+- Lit: The standard shader with all the standard settings, is affected by your scene lighing
+- Unlit: Minimal shader, that is not effected by lighting. 
+
+You can find the shaders by clicking on: 
+![](images/shaders1.jpeg)
+![](images/shaders2.jpeg)
+![](images/shaders3.jpeg)
+
+## Working with Transparency
+To work with transparency you can either select a shaders that directly supports transcparency (e.g. Unlit -> Transparency) or you can change the render setting of your shader, in case of the Lit shader like this: 
+![](images/shaders4.jpeg)
+
+Also make sure to change the Transparency-Setting when importing your texture/image: 
+![](images/shaders5.jpeg)
+ 
 ### Best Places to get free Textures: 
 - [Polyhaven](https://polyhaven.com/textures)
 - [Unity Asset Store](https://assetstore.unity.com/?category=2d%2Ftextures-materials&free=true&orderBy=1)
@@ -131,7 +159,12 @@ Conversion Table for using Polyhaven Materials:
 | Height Map       | Displacement|
 | Occlusion Map    | AO          |
 
-# <a name="3dassets"></a>Working with imported 3D Assets
+# <a name="terrain"></a>Terrain Tool  
+![](images/terraintools.jpeg)
+With the Terrain Tool, you can very easily create landscapes and add vegetation. You can find a good tutorial here: 
+[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
+
+# <a name="3dassets"></a> Working with imported 3D Assets
 ![](images/assets.jpeg)
 
 Most of the times the 3D-Assets are generated outside of Unity and then imported into the project.
@@ -166,8 +199,15 @@ Note: you can also use other file formats (link .blend etc. if the corresponding
 
 > Trees are rather difficult to render in Unity, so either use Low-Poly Versions, or you can also find some in the Assets Store (e.g. [Realistic Pines](https://assetstore.unity.com/packages/3d/vegetation/trees/realistic-pine-tree-pack-232166), [Polygon Trees](https://assetstore.unity.com/packages/3d/vegetation/trees/polygon-trees-224068))
 
+### Using Everything Models 
 
-## Online Sculpting Tools
+To use the Everything Models: 
+1. download this shader: [VertexLitShader](Assets/VertexColorLit.shader)
+2. Drag and Drop the shader in your Unity Project Window
+3. Create a new material -> Drag and Drop the shader on this Material
+4. Apply this material to the everything Model in your scene 
+
+##  <a name="onlinetools"></a> Online Sculpting Tools
 
 ### SculptGL 
 ![](images/sculptgl.jpeg)
@@ -225,16 +265,9 @@ Probably a problem with the renderpipeline, find the material in the project win
 
 Especially when choosing the 3D assets and lights, you should have in mind where your scene will be played in the end, e.g. as desktop VR, i.e. on a powerful computer, or in mobile VR (e.g. an Oculus Quest). As all devices only have a limited performance capacity.
 
-
-
 To reduce the triangles of an object, you can use a 3D-modelling-software like blender, you can find more information here: 
 [Simplify a Mesh in Blender](https://all3dp.com/2/blender-simplify-mesh-simply-explained/)
 
-
-# <a name="terrain"></a>Terrain Tool  
-![](images/terraintools.jpeg)
-With the Terrain Tool, you can very easily create landscapes and add vegetation. You can find a good tutorial here: 
-[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
 
 # <a name="light"></a>Lighting the Scene
 ![](images/lights.jpeg)

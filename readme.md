@@ -6,10 +6,12 @@
 	- [Examples](examples.md)
 	- [Working with the Unity Editor](session1.md#editor)
 	- [Structuring your project](session1.md#structure)
-	- [Working with 3D assets](session1.md#3dassets)
+	- [Basic 3D Objects](session1.md#basic3d)	
 	- [Materials/ Shaders/ Textures](session1.md#materials)
 	- [Terrain](session1.md#terrain)
-	- [Lights](session1.md#light)
+	- [Working with imported 3D Assets](session1.md#3dassets)
+	- [Online Sculpting Tools](session1.md#onlinetools)
+	- [Lighting the Scene](session1.md#light)
 - Session 2
 	- Animation
 	- Characters
