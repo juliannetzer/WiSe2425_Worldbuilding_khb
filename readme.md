@@ -11,9 +11,11 @@
 	- [Terrain](session1.md#terrain)
 	- [Lights](session1.md#light)
 - Session 2
+	- Animation
 	- Characters
 	- Dialogue System
 	- Audio
-	- Animation
+	- Visual Effects
 - Session 3 
+	- Camera Movements
 	- Simulated Movement
