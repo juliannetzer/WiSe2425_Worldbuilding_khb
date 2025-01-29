@@ -66,7 +66,6 @@ Spatial audio in Unity simulates how sounds change based on their position relat
 
 - The Audio Listener component, usually attached to the Main Camera, represents the player's "ears" and determines how sound is perceived in the scene. Only one Audio Listener should be active at a time.
 - Audio Sources are attached to GameObjects that produce sound. They determine volume, pitch, spatial blend, and 3D positioning of the audio.
-
 ![](images/Audio1.jpg)
 
 With "Min Distance" and "Max Distance" you can set the minimum and maximum distance of audibility. 
@@ -78,9 +77,24 @@ With the "Volume Rolloff" you can select different Rolloff algorithms. Select "L
 # <a name="animation"></a>Animation
 ![](images/animations.jpeg)
 
+Unity’s Animation system allows you to bring objects to life by animating their properties over time using keyframes. The Animation Window is used to create and edit animations by setting keyframes at different points on a timeline.
+
+- Keyframes – Snapshots of a property at a specific time. Unity smoothly transitions between them.
+- Animation Clips – A sequence of keyframes that define an animation (e.g., a door opening, a character jumping).
+- Animator Component – Controls animation playback on a GameObject.
+- Animation Controller – Manages transitions between multiple animations.
+
+What Can Be Animated Easily?
+
+Unity allows you to animate nearly any GameObject property, including:
+-  Transform Properties – Position, rotation, scale (e.g., moving a platform up and down).
+- Visibility – Enabling/disabling objects (e.g., making an enemy appear).
+- Light Properties – Intensity, color, range (e.g., flickering torch effect).
+- Material Properties – Color changes, etc.
+
 ## Animations window 
 
-To animate an object, open the "Animation" window (Window -> Animation -> Anmation). 
+To animate an object, open the "Animation window" (Window -> Animation -> Anmation). 
 Then select the GameObject you want to animate in the hierarchy window, now you should see this in the Animation Window: 
 ![](images/beginanimating.jpeg)
 Click on "Create" this creates an *Animation Clip*.
@@ -90,16 +104,15 @@ Now you can start to animate your object either by hitting the record button:
 or by manually adding the properties and keyframes: 
 ![](images/keyframe.gif)
 
-https://learn.unity.com/tutorial/introduction-to-sprite-animations#
-
-See also:
-- [Tutorial Animation in Unity](https://learn.unity.com/tutorial/working-with-animations-and-animation-curves#)
+After you have created your Animation click on "Play" to see the animation in your Game View. 
 
 By default the Animation will loop, if you only want it to play once select the Animation Clip in the Project window and untick "Loop Time" in the Inspector. 
 ![](images/loop.jpeg)
 
+> See also:
+- [Tutorial Animation in Unity](https://learn.unity.com/tutorial/working-with-animations-and-animation-curves#)
+- You can also create 2D Animations with this system, you can find a detailled Tutorial here: [Introduction to Sprite Animations](https://learn.unity.com/tutorial/introduction-to-sprite-animations#)
 
-> This method works best when you want to animate a single objects, like a spinning light. If you want to animate multiple objects together and the timing is importing, like for example a cinematic scene, or a transition scene then the "Timeline"-feature works better. 
 
 ## Animator window
 ![](images/Animator.jpeg)
@@ -107,28 +120,67 @@ By default the Animation will loop, if you only want it to play once select the 
 *Note: In the next session we will have a look how we can change animations in the animator window* 
 The Animator selects which of your animation clips will be played. For example when you want to create a Character that has different states (like walking, standing, running) and one animation clip for each state you would animate this in the Animator window (in general: non-linear animations). 
 
+# <a name="characters"> Characters
 
-## Timeline
-![](images/Timeline.jpeg)
+In this session we will implement a character that can walk through the scene controlled by our mouse and keyboard input. We will work with the third-person-perspective, but first person would also be possible. A first-person perspective lets the player experience the game through the character’s eyes, with the camera positioned as if they are seeing directly from their head. This is creating an immersive but limited field of view. A third-person perspective shows the character from behind or at an angle, allowing the player to see their full body while moving providing better spatial awareness.
 
-The Timeline works best if you want to create a linear sequence of animations, like a transition scene or a little movie sequence. 
+For the implemtation we will use this plugin from the Unity Asset Store: https://assetstore.unity.com/packages/essentials/starter-assets-character-controllers-urp-267961 
 
-To work with the Timeline open the Timeline window (Window -> Sequencing -> Timeline). 
-Then create an empty GameObject (GameObject -> Create Empty) and name it "Director", this GameObject will control our movie sequence (and also our cameras later). 
+> The Unity Asset Store is an online marketplace where developers can find and purchase assets to use in their Unity projects. It offers a wide range of resources, including 3D models, textures, animations, scripts, sound effects, and complete game templates. Both free and paid assets are available. 
 
-> You can click on the settings wheel on the upper right side and choose whether you wanna work in seconds or in frames. ![](images/timing.jpeg)
+To install the asset, sign in with your Unity Account and click on "Add to my Assets". 
 
-### Activating Objects in the Timeline
-With the timeline you can easily activate and deactivate objects. Right-click on the left side of the Timeline window and select "Activation Track" then drag and drop the GameObject you want to activate and deactive in the selector field. 
-![](images/activation.gif)
-You can also change the time when and for how long your object should be active
-![](images/changeactivation.gif)
+Afterwards click on "Open in Unity", in Unity click on Download and then Import. 
+![](images/Asset1.jpeg)
+Unity will now ask you whether you want to install the dependencies, click on "Install/Upgrade" and after that click on "Yes" when it asks you about the new Input System this will restart your Unity Editor. 
+![](images/Asset2.jpeg)
 
-### Animate Objects
-You can also animate object in the same way as in the Animation window, but in the Timeline window you can directly see the timing for the whole scene, in case the animation should happen at a specific point in time. 
-Right click on the left side again and select "Animation Track" (always make sure that the "Director" GameObject is selected in the hierarchy) then drag and drop the object you want to animate in the selector field and click on record. 
-![](images/animationtimeline.gif)
+Now we have to import the package, open the Package Manager (Window -> Package Manager), select "My Assets" and search for "Starter Assets: Character Controllers".
+![](images/import1.gif)
 
-> Here you can find some information about the other tracks you can use with the timeline: [Overview of the Timeline-Features](https://lukeduckett.medium.com/it-all-comes-down-to-timing-a-quick-guide-to-timeline-in-unity-fd96b26820f4),[Control Track](https://christopherhilton88.medium.com/what-is-a-control-track-in-timeline-f70588662cce), [Signal Track](https://blog.unity.com/technology/how-to-use-timeline-signals), [Playable Track](https://docs.unity3d.com/2018.3/Documentation/ScriptReference/Timeline.PlayableTrack.html)
+Now you should see a folder "Starter Assets" in your project window. In this folder go to Runtime -> ThirdPersonController -> Prefabs and drag and drop the "NestedParentArmature_Unpack.prefab" in your scene and adjust the position. 
+![](images/import2.gif)
 
-> Tutorial how to work with Audio Tracks in the timeline: [Unity Learn: Audio and the Timeline](https://learn.unity.com/tutorial/working-with-audio-tracks-in-timeline#5f6126e3edbc2a0020034db9)
+> Prefabs in Unity are reusable GameObjects that store a predefined configuration, including components, properties, and child objects.
+
+Now deactivate your Main Camera, since the Prefab already has a camera. 
+![](images/import3.gif)
+
+When you now click Play, you should be able to control the Character with your keyboard and mouse. 
+![](images/import4.gif)
+
+## Changing the character 
+
+If you want to change the character, you have to options: 
+	- choose another humanoid character (e.g. from Mixamo)
+	- use another 3D Model, which is not animated (note: you can also animate this in theory, but we won't cover this in this course)
+
+### Choose another humanoid character
+
+You can find a lot of free to use characters at [Mixamo](https://www.mixamo.com), you can also create your own scanned character e.g. with [Avaturn](https://avaturn.me/) or [in3D](https://in3d.io/) (unfortunately not for free). 
+
+For this course we will use Mixamo, so login and go to the characters tab and select a character. 
+![](images/mixamo1.jpeg)
+
+And download them in T-Pose as a fbx for Unity:
+![](images/mixamo2.jpeg)
+
+Then import the .fbx to Unity and select the file in the Project window. We first fix the textures like this: 
+![](images/mixamo3.gif)
+
+And then import the rig (the movable bones) like this: 
+![](images/mixamo4.gif)
+
+Now we can change the Avatar, in the scene for this go to the NestedParentArmature_Unpack Prefab in the scene and show the child-objects with clicking on the arrow on the left side. And also show the child-objects of PlayerArmature:
+![](images/mixamo5.gif)
+
+> Child Objects in Unity are GameObjects that are hierarchically linked to another GameObject, called the Parent. When a Parent Object moves, rotates, or scales, its Child Objects inherit those transformations.
+
+Then make the imported .fbx-file a child object (drag and drop it into the hierarchy) of PlayerArmature and deactivate the old Avatar with deactivating "Geometry" and "Skeleton"
+![](images/mixamo6.gif)
+
+The last step is to select the PlayerArmature Object and change the Avatar to the current Avatar (the Object with the same name as your imported .fbx). 
+![](images/mixamo7.gif)
+
+### Choose another 3D Model 
+
