@@ -184,3 +184,25 @@ The last step is to select the PlayerArmature Object and change the Avatar to th
 
 ### Choose another 3D Model 
 
+To choose another 3D Model as a character, we first need to delete the old prefab which uses a humanoid rig. So select "NestedParentArmature_Unpack" in the hierachy and select "Delete" after a right click. 
+
+Then we can import our new rig, you can find it under StarterAssets -> Runtime -> ThirdPersonController -> Prefabs -> NestedParentCapsule_Unpack. Drag and Drop this in your hierarchy or scene and position it correctly. 
+
+Now we have a capsule moving in the same way as the humanoid character before: 
+![](images/3dmodelcharacter1.gif)
+
+Now we can change the Model in a similar way, open the Prefab again and deactivate the "Capsule"-object: 
+![](images/3dmodelcharacter2.gif)
+
+Then drag and drop the Object you want to use as a Character in the hiearchy directly beneath the "Capsule"-object and position and scale it accordingly: 
+![](images/3dmodelcharacter3.gif)
+
+Now you can move around with you 3D-Object as a Avatar/Character in your scene: 
+![](images/3dmodelcharacter4.gif)
+
+
+## Changing Camera perspective
+
+## First Person Controller 
+
+
