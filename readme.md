@@ -14,10 +14,11 @@
 	- [Lighting the Scene](session1.md#light)
 	- [Working together in Unity](session1.md#workingtogether)
 - Session 2
+	- Camera 
+	- Visual Effects
+	- Audio
 	- Animation
 	- Characters
-	- Audio
-	- Visual Effects
 	- Dialogue System
 - Session 3 
 	- Camera Movements

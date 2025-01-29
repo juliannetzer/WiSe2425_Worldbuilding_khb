@@ -1,18 +1,52 @@
+# Camera & The Game Windows
+
+## Camera
+![](images/camera1.jpeg)
+The Camera in Unity acts as the player’s view into the game world, rendering everything it sees. It defines what is visible on screen, including perspective, depth, and field of view. Every Unity scene starts with a Main Camera, which you can find in the Hierarchy panel. You can adjust its properties in the Inspector, such as position, projection type (perspective or orthographic). In the scene view you can also see the cameras view frustum and a small preview of what the camera sees. 
+When you are in the scene view you can right click on the camera and choose "Align to View", this aligns the camera to your current scene view.
+
+## Game View
+The Game View window in Unity shows how your game will look when played. It renders what the Main Camera sees and simulates the final player experience. You can test gameplay, adjust resolutions, and switch between different aspect ratios. The Play, Pause, and Step buttons allow you to run and debug your game in real time. Unlike the Scene View, which is for editing, the Game View provides a preview of the final visuals and interactions. 
+![](images/camera2.jpeg)
+
+When we work with Animations and Audio you can only see and hear the effect with the game running, to do this, click the Play-Button on top of the window: 
+![](images/camera3.jpeg)
+
+> !!! Changes made in Play Mode are not saved, so be sure to stop the game by clicking the Play button again before making any adjustments. !!! 
+
+
+# Visual Effects & Global Volume
+
+The Global Volume in Unity is a component that applies post-processing effects across the entire scene. You can adjust settings like exposure and color adjustments in a Volume Profile to control the overall look of your game. Since it affects the whole scene, it’s useful for setting up consistent visual aesthetics. 
+
+To change the settings select "Global Volume" in your hiearchy, in the inspector you can see the different settings. If you click on "Add Override" you can add effects. 
+![](images/visualeffects.jpeg)
+
+> If you don't have a Global Volume Game Object in your scene you can add it when you go to: GameObject -> Volume -> Global Volume
+
+Some of the effects are: 
+- Chromatic Aberration – Simulates lens distortion by slightly separating colors, creating a fringing effect often seen in real-world camera lenses.
+- Color Adjustments – Allows control over brightness, contrast, saturation, and hue to fine-tune the overall color balance of the scene.
+- Depth of Field – Blurs objects based on their distance from the camera, mimicking how real cameras focus on specific areas.
+- Film Grain – Adds a subtle grainy texture to simulate the look of old film cameras, enhancing a cinematic feel.
+- Lens Distortion – Warps the edges of the image to mimic real-life lens imperfections, often used to create a fisheye or wide-angle effect.
+- Lift, Gamma, Gain – Provides fine control over color grading by adjusting shadows (lift), midtones (gamma), and highlights (gain).
+- Motion Blur – Blurs objects based on their speed and direction, creating a smoother, more dynamic look for fast movements.
+- Shadows, Midtones, Highlights – Separately adjusts the brightness and color of different tonal ranges, offering advanced control over lighting and contrast.
+
+> You can find a detailled Tutorial here: [POST PROCESSING in URP (Universal Render Pipeline)](https://www.youtube.com/watch?v=oXNy9mszKxw)
+
 # <a name="audio"></a>Audio 
 
 To add sound to a scene create a new Audio Source: GameObject -> Audio -> Audio Source. Or drag and drop your soundfile in the Sceneview. 
 ![](images/AudioSource.gif)
 
 
-- [Tutorial: Sound Component in Unity](https://learn.unity.com/tutorial/working-with-audio-components-2019-3)
-
 Supported file formats: 
 - AIFF 
 - WAV 
 - MP3
 - Ogg 
-
-### Spatial Audio
 
 Places to get (free) sounds: 
 - [Adobe Creative Cloud](https://www.adobe.com/products/audition/offers/AdobeAuditionDLCSFX.html)
@@ -21,12 +55,18 @@ Places to get (free) sounds:
 - [OpenGameArt](https://opengameart.org/art-search-advanced?field_art_type_tid%5B%5D=13)
 - [Soundcloud](https://soundcloud.com/)
 
-> Tutorial how to work with Audio Tracks in the timeline: [Unity Learn: Audio and the Timeline](https://learn.unity.com/tutorial/working-with-audio-tracks-in-timeline#5f6126e3edbc2a0020034db9)
+> - [Tutorial: Sound Component in Unity](https://learn.unity.com/tutorial/working-with-audio-components-2019-3)
 
 
 ## <a name="spatialaudio"></a>Spatial Audio
 
-Spatial Audio works in Unity out of the box. If you have created an audio source in unity, you can use the "Spatial Blend" value to set how much the positioning of the audio source affects the volume and audible direction of the source. 
+Spatial audio in Unity simulates how sounds change based on their position relative to the listener, creating a more immersive experience. It takes into account distance, direction, and environmental effects to make sounds feel like they are coming from specific locations in 3D space.
+
+### Audio Listener & Audio Sources
+
+- The Audio Listener component, usually attached to the Main Camera, represents the player's "ears" and determines how sound is perceived in the scene. Only one Audio Listener should be active at a time.
+- Audio Sources are attached to GameObjects that produce sound. They determine volume, pitch, spatial blend, and 3D positioning of the audio.
+
 ![](images/Audio1.jpg)
 
 With "Min Distance" and "Max Distance" you can set the minimum and maximum distance of audibility. 
@@ -35,7 +75,7 @@ With "Min Distance" and "Max Distance" you can set the minimum and maximum dista
 With the "Volume Rolloff" you can select different Rolloff algorithms. Select "Linear Rolloff" if you want to hear a strong difference based on the positioning, "Logarithmic Rolloff" for a more realistic effect. 
 ![](images/Audio3.jpg)
 
-# <a name="animation"></a>Animation: Timeline
+# <a name="animation"></a>Animation
 ![](images/animations.jpeg)
 
 ## Animations window 
@@ -49,6 +89,8 @@ Now you can start to animate your object either by hitting the record button:
 ![](images/record.gif)
 or by manually adding the properties and keyframes: 
 ![](images/keyframe.gif)
+
+https://learn.unity.com/tutorial/introduction-to-sprite-animations#
 
 See also:
 - [Tutorial Animation in Unity](https://learn.unity.com/tutorial/working-with-animations-and-animation-curves#)
@@ -88,3 +130,5 @@ Right click on the left side again and select "Animation Track" (always make sur
 ![](images/animationtimeline.gif)
 
 > Here you can find some information about the other tracks you can use with the timeline: [Overview of the Timeline-Features](https://lukeduckett.medium.com/it-all-comes-down-to-timing-a-quick-guide-to-timeline-in-unity-fd96b26820f4),[Control Track](https://christopherhilton88.medium.com/what-is-a-control-track-in-timeline-f70588662cce), [Signal Track](https://blog.unity.com/technology/how-to-use-timeline-signals), [Playable Track](https://docs.unity3d.com/2018.3/Documentation/ScriptReference/Timeline.PlayableTrack.html)
+
+> Tutorial how to work with Audio Tracks in the timeline: [Unity Learn: Audio and the Timeline](https://learn.unity.com/tutorial/working-with-audio-tracks-in-timeline#5f6126e3edbc2a0020034db9)
