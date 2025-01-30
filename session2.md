@@ -85,7 +85,7 @@ With the "Volume Rolloff" you can select different Rolloff algorithms. Select "L
 
 # <a name="video"></a>Video 
 
-Unity can handle a variety of video format for playback in the scene, you can find the list here: [file format Unity Video](https://docs.unity3d.com/Manual/VideoSources-FileCompatibility.html). In my experience the H264 frmat in the .mp4 container works best. 
+Unity can handle a variety of video format for playback in the scene, you can find the list here: [file format Unity Video](https://docs.unity3d.com/Manual/VideoSources-FileCompatibility.html). In my experience the H264 format in the .mp4 container works best. 
 
 Importing videos is straightforward: just drag and drop them in your project window, like all other assets. 
 
@@ -93,7 +93,7 @@ To render the video in the world space you need a "virtual screen", for example 
 Its best to scale the Quad according to your video aspect ratio, otherwise the video will be distorted. 
 
 When you select the GameObject with the video attached you can change settings like whether the video loops, the playback speed or the volume.
-![](images/video1.jpg)
+![](images/video1.jpeg)
 
 > By default the sound of the video plays directly over your speakers. To get more control you change the Audio Output Mode to "Audio Source" and add a Audio Source: ![](images/video2.gif)
 
