@@ -18,6 +18,7 @@
 	- [Camera & Game Window](session2.md#camera)
 	- [Visual Effects & Global Volume](session2.md#visualeffects)
 	- [Audio](session2.md#audio)
+	- [Video](session2.md#video)
 	- [Animation](session2.md#animation)
 	- [Characters](session2.md#characters)
 	- [Dialogue System](session2.md#dialogue)
