@@ -13,13 +13,14 @@
 	- [Online Sculpting Tools](session1.md#onlinetools)
 	- [Lighting the Scene](session1.md#light)
 	- [Working together in Unity](session1.md#workingtogether)
-- Session 2
-	- Camera 
-	- Visual Effects
-	- Audio
-	- Animation
-	- Characters
-	- Dialogue System
+- [Session 2](session2.md)
+	- [Intermezzo: Photogrammetry](session2.md#photogrammetry)
+	- [Camera & Game Window](session2.md#camera)
+	- [Visual Effects & Global Volume](session2.md#visualeffects)
+	- [Audio](session2.md#audio)
+	- [Animation](session2.md#animation)
+	- [Characters](session2.md#characters)
+	- [Dialogue System](session2.md#dialogue)
 - Session 3 
 	- Camera Movements
 	- Simulated Movement
