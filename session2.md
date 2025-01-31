@@ -108,13 +108,16 @@ Unity’s Animation system allows you to bring objects to life by animating thei
 - Animator Component – Controls animation playback on a GameObject.
 - Animation Controller – Manages transitions between multiple animations.
 
-What Can Be Animated Easily?
+What can be animated easily?
 
 Unity allows you to animate nearly any GameObject property, including:
--  Transform Properties – Position, rotation, scale (e.g., moving a platform up and down).
+- Transform Properties – Position, rotation, scale (e.g., moving a platform up and down).
 - Visibility – Enabling/disabling objects (e.g., making an enemy appear).
 - Light Properties – Intensity, color, range (e.g., flickering torch effect).
 - Material Properties – Color changes, etc.
+
+What can't be a easily? 
+- The form of the mesh itself, so deforming the mesh. For this, the best way is to rig you figure in the 3D-Software Blender, you can find a tutorial here: [Rigging for impatient people](https://www.youtube.com/watch?v=DDeB4tDVCGY)
 
 ## Animations window 
 
