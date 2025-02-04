@@ -1,6 +1,6 @@
 # <a name="photogrammetry"></a>Photogrammetry
 
-Two apps i tested and work good:
+Two apps that i tested:
 
 - [Polycam](https://apps.apple.com/de/app/polycam-lidar-3d-scanner/id1532482376)
 - [Luma AI](https://apps.apple.com/de/app/luma-3d-capture/id1615849914)
