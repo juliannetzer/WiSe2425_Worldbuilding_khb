@@ -23,5 +23,5 @@
 	- [Characters](session2.md#characters)
 	- [Dialogue System](session2.md#dialogue)
 - Session 3 
-	- Coding in Unity 
-	- Simulated Movement
+	- [Coding in Unity](session3.md#Coding)
+	- [Recording](session3.md#Recording)
