@@ -22,6 +22,6 @@
 	- [Animation](session2.md#animation)
 	- [Characters](session2.md#characters)
 	- [Dialogue System](session2.md#dialogue)
-- Session 3 
+- [Session 3](session3.md)
 	- [Coding in Unity](session3.md#Coding)
 	- [Recording](session3.md#Recording)

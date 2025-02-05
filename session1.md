@@ -128,16 +128,16 @@ The most important ones for you are:
 - Unlit: Minimal shader, that is not effected by lighting. 
 
 You can find the shaders by clicking on: 
-![](images/shaders1.jpeg)
-![](images/shaders2.jpeg)
-![](images/shaders3.jpeg)
+![](images/shader1.jpeg)
+![](images/shader2.jpeg)
+![](images/shader3.jpeg)
 
 ## Working with Transparency
 To work with transparency you can either select a shaders that directly supports transcparency (e.g. Unlit -> Transparency) or you can change the render setting of your shader, in case of the Lit shader like this: 
-![](images/shaders4.jpeg)
+![](images/shader4.jpeg)
 
 Also make sure to change the Transparency-Setting when importing your texture/image: 
-![](images/shaders5.jpeg)
+![](images/shader5.jpeg)
  
 ## Places to get free Textures: 
 - [Polyhaven](https://polyhaven.com/textures)

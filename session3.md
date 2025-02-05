@@ -104,7 +104,7 @@ public class HelloWorld : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Hello World!")
+        Debug.Log("Hello World!");
     }
 }
 ```
@@ -192,7 +192,9 @@ Then again create a new GameObject in your scene and add the script. When you ad
 It also adds the possibilty to change the radius of the collider directly via the inspector: 
 ![](images/script7.jpeg)
 
-Then add a sound 
+Then add a sound to the Audio source that gets played when the character (or another object with a collider) is near. 
+
+> You can also find the script [here](Script/ProximitySoundTrigger.cs)
 
 # Working with ChatGPT & Claude to write new scripts
 
