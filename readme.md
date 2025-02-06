@@ -24,4 +24,7 @@
 	- [Dialogue System](session2.md#dialogue)
 - [Session 3](session3.md)
 	- [Coding in Unity](session3.md#Coding)
+		- [Creating a new script](session3.md#newscript)
+		- [Working with ChatGPT & Claude](session3.md#llm)
+	- [Example Code Snippets](session3.md#examples)
 	- [Recording](session3.md#Recording)

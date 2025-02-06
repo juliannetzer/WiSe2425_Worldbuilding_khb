@@ -87,7 +87,7 @@ transform.position = new Vector3(0, 2, 0);
     }
 ```
 
-## Creating a new Script
+## <a name="newscript"></a>Creating a new script
 
 To create a script select Assets -> Create -> C# Script and select a name (please use a name that describes the function in our case "HelloWorld"). 
 ![](images/script2.jpeg)
@@ -194,10 +194,10 @@ It also adds the possibilty to change the radius of the collider directly via th
 
 Then add a sound to the Audio source that gets played when the character (or another object with a collider) is near. 
 
-> You can also find the script here: [link to script](Script/ProximitySoundTrigger.cs)
-> To import the script go to "Download raw file" and then drag and drop in your Unity project window. ![](images/DownloadScript.jpeg)
+> You can also find the script here: [link to script](Script/ProximitySoundTrigger.cs).
+>  To import the script go to "Download raw file" and then drag and drop in your Unity project window. ![](images/DownloadScript.jpeg)
 
-# Working with ChatGPT & Claude to write new scripts
+# <a name="llm"></a>Working with ChatGPT & Claude
 
 In the next step we want to change our existing script with the LLMs (Large Language Models) ChatGPT (https://chatgpt.com) or Claude (https://claude.ai). 
 So please first sign up for one of the tools.  
@@ -270,7 +270,7 @@ public class ProximitySoundTrigger : MonoBehaviour
 
 So either try to generate a script that turns on a light when the character comes near only with the LLM or ask the LLM to change the code based on the previous script. 
 
-## Best pratices
+## Best practices
 
 ### Be precise
 Describe the Problem:
@@ -306,11 +306,11 @@ Use the LLM as a tutor, not just a code generator.
 
 Keep a list of prompts that worked well for you. This helps you quickly reuse effective questions without starting from scratch.
 
-# Examples
+# <a name="examples"></a> Examples
 
 In the following you can find a few example with instruction how to use them. You can just use these in your projects or modify them with the LLMs for your needs. 
 
-## Randomly place object in the scene
+## Randomly place objects in the scene
 ![](images/example1_1.gif)
 
 This script randomly places Prefabs in your scene, you have the following public values: 
