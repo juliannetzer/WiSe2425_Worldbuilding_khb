@@ -194,7 +194,7 @@ It also adds the possibilty to change the radius of the collider directly via th
 
 Then add a sound to the Audio source that gets played when the character (or another object with a collider) is near. 
 
-> You can also find the script [here](Script/ProximitySoundTrigger.cs)
+> You can also find the script here: [link to script](Script/ProximitySoundTrigger.cs)
 
 # Working with ChatGPT & Claude to write new scripts
 
@@ -317,6 +317,8 @@ This script randomly places Prefabs in your scene, you have the following public
 You can also hover over the variables to see what each of them does: 
 ![](images/example1_3.jpeg)
 
+Download the script here: [link to script](Script/ObjectSpawner.cs)
+
 ### How to Create Prefabs in Unity
 For this example you need a Prefab that gets spawned in the scene. A Prefab in Unity is a reusable GameObject template that allows you to create multiple instances with the same properties. Here’s how to create one:
 
@@ -359,6 +361,8 @@ How to Add a Collider:
 ## Change animations when the player or another object comes near
 ![](images/example2_3.gif)
 
+Download the script here: [link to script](Script/ProximityAnimationTrigger.cs)
+
 ### Creating multiple animations for one GameObject
 In the following example we will use a script to change the animation when a player comes near.
 To create multiple animations the object, select the GameObject you want to animate and click on the drop-down menu. 
@@ -386,9 +390,9 @@ To add a Tag to an object select the object and click on Tag in the inspector, c
 
 With this script you can make a GameObject wander around randomly in your scene. 
 
-> This script only works with simple GameObject, not with more complex ones like characters with animations. 
+> This script only works with simple GameObject, not with more complex ones like characters with animations. If you want pair it with the Third Person Controller try to use ChatGPT or Claude to generate the Code, you can take this script as a starting point. 
 
-Link to the script: 
+Download the script here: [link to script](Script/SimpleWanderer.cs)
 
 ### Wandering 
 - Move in random directions
@@ -405,7 +409,7 @@ Link to the script:
 
 ## Wandering around and looking for something
 
-Link to the script: 
+Download the script here: [link to script](Script/WanderingTracker.cs)
 
 This script creates an object that can wander around and track/follow specific targets in Unity. 
 
@@ -481,7 +485,7 @@ It has to behaviours implemented:
 
 - When you now click the Play Button Unity will record your scene. 
 
-> You can also change the Recording Mode: 
->Manual: Start and stop recording manually.
->Frame Interval: Record from specific frames (e.g., frames 0–300).
->Time Interval: Record for a set time (e.g., 10 seconds).
+>You can also change the Recording Mode: 
+>   - Manual: Start and stop recording manually.
+>   - Frame Interval: Record from specific frames (e.g., frames 0–300).
+>   - Time Interval: Record for a set time (e.g., 10 seconds).
