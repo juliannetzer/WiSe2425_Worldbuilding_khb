@@ -195,6 +195,7 @@ It also adds the possibilty to change the radius of the collider directly via th
 Then add a sound to the Audio source that gets played when the character (or another object with a collider) is near. 
 
 > You can also find the script here: [link to script](Script/ProximitySoundTrigger.cs)
+> To import the script go to "Download raw file" and then drag and drop in your Unity project window. ![](images/DownloadScript.jpeg)
 
 # Working with ChatGPT & Claude to write new scripts
 
