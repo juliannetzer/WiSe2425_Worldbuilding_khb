@@ -493,3 +493,16 @@ It has to behaviours implemented:
 >   - Manual: Start and stop recording manually.
 >   - Frame Interval: Record from specific frames (e.g., frames 0–300).
 >   - Time Interval: Record for a set time (e.g., 10 seconds).
+
+> You can also find more detailled instruction how to use advanced camera movements here: [Unity Cinemachine Introduction](https://github.com/juliannetzer/wise2223_worldbuilding_unity/blob/main/session2.md#cinemachine)
+
+# <a name="Recording"></a> Lighting extra: Fog
+![](images/fog1.jpeg)
+To add fog go to Window -> Rendering -> Lighting. 
+In the Environment you can now find the Fog Settings: 
+![](images/fog2.jpeg)
+
+You can see that you now only see the fog on the GameObjects in the Scene not the environment itself:
+![](images/fog3.jpeg)
+To change this you can color the background of the camera in the same color, for this select your camera and change the background settings to the same color as your fog: 
+![](images/fog4.jpeg)
