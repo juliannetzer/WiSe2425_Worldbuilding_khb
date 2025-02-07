@@ -125,8 +125,6 @@ Then we can start the Play Mode and should now see a "Hello World" in the consol
 
 ## Public Variables & Unity Editor
 
-> Note this example 
-
 For the next example we will use a more advanced script, that starts to play an audio file, when the player (or another GameObject) comes near. In this example we will also work with public variables. Variables declared as public can be edited directly in the Inspector without modifying the script. This makes tweaking values easier without needing to recompile the code. You can also make a public GameObject variable to edit other GameObjects in your scene. 
 
 So again create a new C# script and name it "ProximitySoundTrigger", then copy and paste the following code:
@@ -270,6 +268,12 @@ public class ProximitySoundTrigger : MonoBehaviour
 
 So either try to generate a script that turns on a light when the character comes near only with the LLM or ask the LLM to change the code based on the previous script. 
 
+> You can also think of other things to happen, e.g.: 
+> - the object get randomly placed somewhere else when the player approaches
+> - the object gets bigger or smaller when the player approaches 
+> - the object changes to a random color when the player gets close.
+> - when the player approaches, the object creates a clone nearby
+
 ## Best practices
 
 ### Be precise
@@ -376,8 +380,7 @@ In the Animator window (Window -> Animation -> Animator) you can see all of the 
 
 
 ### Adding the script 
-You can then download the script from here: 
-LINK TO SCRIPT 
+Download the script here: [link to script](Script/ProximityAnimationTrigger.cs)
 
 Then add it to the GameObject, when you hover over the names of the variables you can see what they do. 
 
